@@ -1,27 +1,17 @@
-body {
-  background-color: #111;
-}
-
 a, p, h1, h2, h3, h4, h5, h6 {
   color: white;
   font-family: "Glacial Indifference", serif;
   font-weight: bold;
 }
 
-h1 {
-  font-size: 8em;
-}
-
 body {
-  position: relative;
-  background-image: url("../svg/background.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
+  background-color: #080808;
+  background: radial-gradient(circle, rgb(63, 94, 251) 0%, rgb(0, 0, 0) 50%);
 }
 body header {
-  background-color: rgb(252, 70, 107);
   height: 35vh;
+  display: flex;
+  justify-content: center;
 }
 body header nav {
   display: flex;
@@ -49,45 +39,17 @@ body header nav ul > li > a:hover {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 12px 32px;
 }
-body header > div {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+body header > h1 {
   position: relative;
-  top: 128px;
+  top: 25vh;
+  font-size: 5em;
+  width: 60%;
+  max-width: 24ch;
+  min-width: 14ch;
+  text-align: center;
 }
-body header > div > div {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-}
-body > section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 100px 40vw;
-}
-
-#curves {
-  aspect-ratio: 960/128;
-  width: 100%;
-  height: 100%;
-}
-
-#background {
-  position: absolute;
-  z-index: -1;
-  aspect-ratio: 540/960;
-  top: -640px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#img-profile {
-  max-height: 256px;
-  max-width: 256px;
-  border-radius: 100%;
+body header > h1 > span {
+  color: #B74F4F;
 }
 
 /*# sourceMappingURL=styles.css.map */
