@@ -4,22 +4,17 @@ a, p, h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-path {
-  background: rgb(85, 85, 85);
-  background-image: radial-gradient(circle, rgb(255, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
-}
-
 body {
   background-color: #CCCCCC;
 }
-body header {
+body > header {
   height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #080808;
 }
-body header + #header_wave {
+body > header + #header_wave {
   background-color: #CCCCCC;
   aspect-ratio: 900/150;
   background-repeat: no-repeat;
@@ -27,7 +22,7 @@ body header + #header_wave {
   background-position: center;
   width: 100%;
 }
-body header nav {
+body > header > nav {
   position: fixed;
   top: 0;
   display: flex;
@@ -40,38 +35,58 @@ body header nav {
   height: 64px;
   z-index: 1;
 }
-body header nav ul {
+body > header > nav ul {
   display: flex;
   flex-direction: row;
 }
-body header nav ul > li > a {
+body > header > nav ul > li > a {
   transition: 250ms ease-in-out;
   padding: 12px;
   border-radius: 100vh;
-  font-size: 24px;
+  font-size: 1.75rem;
 }
-body header nav ul > li > a:hover {
+body > header > nav ul > li > a:hover {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 12px 32px;
 }
-body header div {
+body > header > div {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  row-gap: 10%;
   width: 100%;
   height: 100%;
 }
-body header div > h1 {
+body > header > div > h1 {
   position: relative;
-  font-size: 5em;
+  font-size: 5rem;
   width: 60%;
   max-width: 24ch;
   min-width: 14ch;
 }
-body header div > h1 > span {
-  color: #B74F4F;
+body > header > div > h1 > span {
+  color: rgb(180, 80, 80);
 }
-body footer {
+body > header > div > a {
+  transition: 250ms ease-in-out;
+  background-color: rgb(180, 80, 80);
+  padding: 12px 24px;
+  border-radius: 100vh;
+  font-size: 1.75rem;
+}
+body > header > div > a:hover {
+  padding: 12px 36px;
+}
+body > main > article > section:nth-child(odd) {
+  position: relative;
+  left: 20%;
+}
+body > main > article > section:nth-child(even) {
+  position: relative;
+  right: 20%;
+}
+body > footer {
   background: #000;
   position: relative;
   top: 2560px;
