@@ -1,66 +1,67 @@
-a, p, h1, h2, h3, h4, h5, h6 {
+a {
+  user-select: none;
+}
+
+p {
   color: white;
-  font-family: "Glacial Indifference", serif;
-  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
 }
 
 body {
   background-color: #CCCCCC;
 }
-body > header {
-  height: 75vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #080808;
-}
-body > header + #header_wave {
-  background-color: #CCCCCC;
-  aspect-ratio: 900/150;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-}
-body > header > nav {
+body > nav {
   position: fixed;
-  top: 0;
+  height: 100vh;
+  left: 1%;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(8px);
-  height: 64px;
   z-index: 1;
 }
-body > header > nav ul {
+body > nav > ul {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  row-gap: 4rem;
+  font-size: 3rem;
 }
-body > header > nav ul > li > a {
+body > nav > ul > li > a {
+  filter: blur(1.5px);
   transition: 250ms ease-in-out;
-  padding: 12px;
-  border-radius: 100vh;
-  font-size: 1.75rem;
+  position: relative;
+  left: 0;
 }
-body > header > nav ul > li > a:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 12px 32px;
+body > nav > ul > li > a:hover {
+  transition: 250ms ease-in-out;
+  left: 2%;
+  filter: none;
+}
+body > nav > ul > li > a > p {
+  font-family: "PlayfairDisplay", serif;
+  font-weight: bold;
+  color: #080808;
+}
+body > header {
+  position: relative;
+  z-index: 2;
 }
 body > header > div {
+  height: 75vh;
+  width: 100%;
+  background-color: #080808;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   row-gap: 10%;
-  width: 100%;
-  height: 100%;
 }
 body > header > div > h1 {
-  position: relative;
+  font-family: "Glacial Indifference", sans-serif;
   font-size: 5rem;
+  font-weight: bold;
+  color: white;
+  position: relative;
   width: 60%;
   max-width: 24ch;
   min-width: 14ch;
@@ -78,13 +79,54 @@ body > header > div > a {
 body > header > div > a:hover {
   padding: 12px 36px;
 }
-body > main > article > section:nth-child(odd) {
-  position: relative;
-  left: 20%;
+body > header svg#header_wave {
+  aspect-ratio: 900/150;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
 }
-body > main > article > section:nth-child(even) {
+body > main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+body > main > article {
+  display: flex;
+  flex-direction: column;
+  align-content: end;
+  justify-content: center;
+}
+body > main > article > h1 {
   position: relative;
-  right: 20%;
+  z-index: -1;
+  user-select: none;
+  display: flex;
+  font-family: "Glacial Indifference", sans-serif;
+  font-weight: bold;
+  font-size: 48rem;
+  color: #C8C8C8;
+}
+body > main > article > h1:nth-child(n) {
+  justify-content: flex-end;
+}
+body > main > article > section:nth-child(n) {
+  grid-column: 1;
+}
+body > main > article > section:nth-child(2n) {
+  grid-column: 2;
+}
+body > main > article > section > div > h2 {
+  font-family: "PlayfairDisplay", serif;
+  font-weight: bold;
+  font-size: 3rem;
+  padding: 12px 0;
+  width: 8ch;
+}
+body > main > article > section > div > ul > li {
+  font-family: "Lato", serif;
+  font-size: 1.25rem;
+  padding: 8px 0;
 }
 body > footer {
   background: #000;

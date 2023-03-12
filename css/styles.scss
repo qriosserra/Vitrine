@@ -1,74 +1,77 @@
 $navHeight: 64px;
 $mainColor: rgb(180, 80, 80);
 
-a, p, h1, h2, h3, h4, h5, h6 {
+a {
+  user-select: none;
+}
+
+p {
   color: white;
-  font-family: "Glacial Indifference", serif;
-  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
 }
 
 body {
   background-color: #CCCCCC;
 
-  > header {
-    height: 75vh;
+  > nav {
+    position: fixed;
+    height: 100vh;
+    left: 1%;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #080808;
+    z-index: 1;
 
-    + #header_wave {
-      background-color: #CCCCCC;
-      aspect-ratio: 900/150;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      width: 100%;
-    }
-
-    > nav {
-      position: fixed;
-      top: 0;
+    > ul {
       display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(8px);
-      height: $navHeight;
-      z-index: 1;
+      flex-direction: column;
+      row-gap: 4rem;
+      font-size: 3rem;
 
-      ul {
-        display: flex;
-        flex-direction: row;
+      > li > a {
+        filter: blur(1.5px);
+        transition: 250ms ease-in-out;
+        position: relative;
+        left: 0;
 
-        > li > a {
+        &:hover {
           transition: 250ms ease-in-out;
-          padding: 12px;
-          border-radius: 100vh;
-          font-size: 1.75rem;
+          left: 2%;
+          filter: none;
+        }
 
-          &:hover {
-            background-color: rgba(0, 0, 0, 0.2);
-            padding: 12px 32px;
-          }
+        > p {
+          font-family: "PlayfairDisplay", serif;
+          font-weight: bold;
+          color: #080808;
         }
       }
     }
+  }
+
+  > header {
+    position: relative;
+    z-index: 2;
 
     > div {
+      height: 75vh;
+      width: 100%;
+      background-color: #080808;
+
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
       row-gap: 10%;
-      width: 100%;
-      height: 100%;
 
       > h1 {
-        position: relative;
+        font-family: "Glacial Indifference", sans-serif;
         font-size: 5rem;
+        font-weight: bold;
+        color: white;
+        position: relative;
         width: 60%;
         max-width: 24ch;
         min-width: 14ch;
@@ -86,28 +89,73 @@ body {
         font-size: 1.75rem;
 
         &:hover {
-
           padding: 12px 36px;
         }
       }
     }
+
+    svg#header_wave {
+      aspect-ratio: 900/150;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+    }
   }
 
+
   > main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
     > article {
 
-      > section:nth-child(odd) {
+      display: flex;
+      flex-direction: column;
+      align-content: end;
+      justify-content: center;
+
+      > h1 {
         position: relative;
-        left: 20%;
+        z-index: -1;
+        user-select: none;
+        display: flex;
+
+        font-family: "Glacial Indifference", sans-serif;
+        font-weight: bold;
+        font-size: 48rem;
+        color: #C8C8C8;
+
+        &:nth-child(n) {
+          justify-content: flex-end;
+        }
       }
 
-      > section:nth-child(even) {
-        position: relative;
-        right: 20%;
+      > section:nth-child(n) {
+        grid-column: 1;
+      }
+
+      > section:nth-child(2n) {
+        grid-column: 2;
+      }
+
+      > section > div > h2 {
+        font-family: "PlayfairDisplay", serif;
+        font-weight: bold;
+        font-size: 3rem;
+        padding: 12px 0;
+        width: 8ch;
+      }
+
+      > section > div > ul > li {
+        font-family: "Lato", serif;
+        font-size: 1.25rem;
+        padding: 8px 0;
       }
     }
   }
+
 
   > footer {
     background: #000;
