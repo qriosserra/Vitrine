@@ -117,27 +117,24 @@ body {
       justify-content: center;
 
       > h1 {
-        position: relative;
+        position: absolute;
         z-index: -1;
         user-select: none;
         display: flex;
 
         font-family: "Glacial Indifference", sans-serif;
         font-weight: bold;
-        font-size: 48rem;
-        color: #C8C8C8;
+        font-size: 24rem;
+        color: #C7C7C7;
 
-        &:nth-child(n) {
-          justify-content: flex-end;
-        }
       }
 
-      > section:nth-child(n) {
-        grid-column: 1;
+      &:nth-child(n) > h1 {
+        right: -0.5ch;
       }
 
-      > section:nth-child(2n) {
-        grid-column: 2;
+      &:nth-child(2n) > h1 {
+        left: -0.5ch;
       }
 
       > section > div > h2 {
@@ -146,6 +143,14 @@ body {
         font-size: 3rem;
         padding: 12px 0;
         width: 8ch;
+      }
+
+      > section:nth-child(n) {
+        margin-left: 0;
+      }
+
+      > section:nth-child(2n) {
+        margin-left: 20%;
       }
 
       > section > div > ul > li {

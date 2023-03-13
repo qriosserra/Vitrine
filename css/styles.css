@@ -98,21 +98,24 @@ body > main {
 body > main > article {
   display: flex;
   flex-direction: column;
-  align-content: end;
+  align-content: center;
   justify-content: center;
 }
 body > main > article > h1 {
-  position: relative;
+  position: absolute;
   z-index: -1;
   user-select: none;
   display: flex;
   font-family: "Glacial Indifference", sans-serif;
   font-weight: bold;
-  font-size: 48rem;
-  color: #C8C8C8;
+  font-size: 24rem;
+  color: #C7C7C7;
 }
-body > main > article > h1:nth-child(n) {
-  justify-content: flex-end;
+body > main > article:nth-child(odd) > h1 {
+  right: -0.5ch;
+}
+body > main > article:nth-child(even) > h1 {
+  left: -0.5ch;
 }
 body > main > article > section:nth-child(n) {
   grid-column: 1;
