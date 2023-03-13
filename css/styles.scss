@@ -1,62 +1,165 @@
 $navHeight: 64px;
+$mainColor: rgb(180, 80, 80);
 
-a, p, h1, h2, h3, h4, h5, h6 {
+a {
+  user-select: none;
+}
+
+p {
   color: white;
-  font-family: "Glacial Indifference", serif;
-  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
 }
 
 body {
-  background-color: #080808;
-  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(0,0,0,1) 50%);
+  background-color: #CCCCCC;
 
-  header {
-    height: 35vh;
+  > nav {
+    position: fixed;
+    height: 100vh;
+    left: 1%;
+
     display: flex;
     justify-content: center;
+    align-items: center;
+    z-index: 1;
 
-    nav {
+    > ul {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      row-gap: 4rem;
+      font-size: 3rem;
+
+      > li > a {
+        filter: blur(1.5px);
+        transition: 250ms ease-in-out;
+        position: relative;
+        left: 0;
+
+        &:hover {
+          transition: 250ms ease-in-out;
+          left: 2%;
+          filter: none;
+        }
+
+        > p {
+          font-family: "PlayfairDisplay", serif;
+          font-weight: bold;
+          color: #080808;
+        }
+      }
+    }
+  }
+
+  > header {
+    position: relative;
+    z-index: 2;
+
+    > div {
+      height: 75vh;
+      width: 100%;
+      background-color: #080808;
+
+      display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      position: fixed;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(8px);
-      height: $navHeight;
-      z-index: 1;
+      row-gap: 10%;
 
-      ul {
-        display: flex;
-        flex-direction: row;
+      > h1 {
+        font-family: "Glacial Indifference", sans-serif;
+        font-size: 5rem;
+        font-weight: bold;
+        color: white;
+        position: relative;
+        width: 60%;
+        max-width: 24ch;
+        min-width: 14ch;
 
-        > li > a {
-          transition: 250ms ease-in-out;
-          padding: 12px;
-          border-radius: 100vh;
-          font-size: 24px;
+        > span {
+          color: $mainColor;
+        }
+      }
 
-          &:hover {
-            background-color: rgba(0, 0, 0, 0.2);
-            padding: 12px 32px;
-          }
+      > a {
+        transition: 250ms ease-in-out;
+        background-color: $mainColor;
+        padding: 12px 24px;
+        border-radius: 100vh;
+        font-size: 1.75rem;
+
+        &:hover {
+          padding: 12px 36px;
         }
       }
     }
 
-    > h1 {
-      position: relative;
-      top: 25vh;
-      font-size: 5em;
-      width: 60%;
-      max-width: 24ch;
-      min-width: 14ch;
-      text-align: center;
+    svg#header_wave {
+      aspect-ratio: 900/150;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+    }
+  }
 
-      > span {
-        color: #B74F4F;
+
+  > main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    > article {
+
+      display: flex;
+      flex-direction: column;
+      align-content: end;
+      justify-content: center;
+
+      > h1 {
+        position: relative;
+        z-index: -1;
+        user-select: none;
+        display: flex;
+
+        font-family: "Glacial Indifference", sans-serif;
+        font-weight: bold;
+        font-size: 48rem;
+        color: #C8C8C8;
+
+        &:nth-child(n) {
+          justify-content: flex-end;
+        }
+      }
+
+      > section:nth-child(n) {
+        grid-column: 1;
+      }
+
+      > section:nth-child(2n) {
+        grid-column: 2;
+      }
+
+      > section > div > h2 {
+        font-family: "PlayfairDisplay", serif;
+        font-weight: bold;
+        font-size: 3rem;
+        padding: 12px 0;
+        width: 8ch;
+      }
+
+      > section > div > ul > li {
+        font-family: "Lato", serif;
+        font-size: 1.25rem;
+        padding: 8px 0;
       }
     }
+  }
+
+
+  > footer {
+    background: #000;
+    position: relative;
+    top: 2560px;
   }
 }

@@ -1,11 +1,24 @@
 @font-face {
-    font-family: "Glacial Indifference";
-    src: url("../fonts/GlacialIndifference-Regular.otf");
+    font-family: "Lato";
+    src: url("../fonts/Lato-Regular.ttf");
     font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "Glacial Indifference";
     src: url("../fonts/GlacialIndifference-Bold.otf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "PlayfairDisplay";
+    src: url("../fonts/PlayfairDisplay-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "PlayfairDisplay";
+    src: url("../fonts/PlayfairDisplay-Bold.ttf");
     font-weight: bold;
 }
