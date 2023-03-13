@@ -8,10 +8,6 @@ p {
   font-weight: normal;
 }
 
-img {
-  pointer-events: none;
-}
-
 body {
   background-color: #CCCCCC;
 }
@@ -93,35 +89,26 @@ body > header svg#header_wave {
 body > main {
   display: flex;
   justify-content: center;
-  flex-direction: column;
 }
 body > main > article {
   display: flex;
   flex-direction: column;
-  align-content: center;
   justify-content: center;
 }
 body > main > article > h1 {
   position: absolute;
   z-index: -1;
   user-select: none;
-  display: flex;
   font-family: "Glacial Indifference", sans-serif;
   font-weight: bold;
-  font-size: 24rem;
+  font-size: 25vw;
   color: #C7C7C7;
 }
-body > main > article:nth-child(odd) > h1 {
-  right: -0.5ch;
+body > main > article:nth-child(n) > h1 {
+  left: 0.5ch;
 }
-body > main > article:nth-child(even) > h1 {
-  left: -0.5ch;
-}
-body > main > article > section:nth-child(n) {
-  grid-column: 1;
-}
-body > main > article > section:nth-child(2n) {
-  grid-column: 2;
+body > main > article:nth-child(2n) > h1 {
+  right: 0.5ch;
 }
 body > main > article > section > div > h2 {
   font-family: "PlayfairDisplay", serif;
@@ -129,6 +116,15 @@ body > main > article > section > div > h2 {
   font-size: 3rem;
   padding: 12px 0;
   width: 8ch;
+}
+body > main > article > section {
+  position: relative;
+}
+body > main > article > section:nth-child(even) {
+  right: 100%;
+}
+body > main > article > section:nth-child(odd) {
+  left: 100%;
 }
 body > main > article > section > div > ul > li {
   font-family: "Lato", serif;

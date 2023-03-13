@@ -107,34 +107,31 @@ body {
   > main {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    //flex-direction: column;
 
     > article {
-
       display: flex;
       flex-direction: column;
-      align-content: end;
       justify-content: center;
 
       > h1 {
         position: absolute;
         z-index: -1;
         user-select: none;
-        display: flex;
 
         font-family: "Glacial Indifference", sans-serif;
         font-weight: bold;
-        font-size: 24rem;
+        font-size: 25vw;
         color: #C7C7C7;
 
       }
 
       &:nth-child(n) > h1 {
-        right: -0.5ch;
+        left: 0.5ch;
       }
 
       &:nth-child(2n) > h1 {
-        left: -0.5ch;
+        right: 0.5ch;
       }
 
       > section > div > h2 {
@@ -145,18 +142,22 @@ body {
         width: 8ch;
       }
 
-      > section:nth-child(n) {
-        margin-left: 0;
-      }
+      > section {
+        position: relative;
 
-      > section:nth-child(2n) {
-        margin-left: 20%;
-      }
+        &:nth-child(even) {
+          right: 100%;
+        }
 
-      > section > div > ul > li {
-        font-family: "Lato", serif;
-        font-size: 1.25rem;
-        padding: 8px 0;
+        &:nth-child(odd) {
+          left: 100%;
+        }
+
+        > div > ul > li {
+          font-family: "Lato", serif;
+          font-size: 1.25rem;
+          padding: 8px 0;
+        }
       }
     }
   }
