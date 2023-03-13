@@ -127,11 +127,11 @@ body {
       }
 
       &:nth-child(n) > h1 {
-        left: 0.5ch;
+        right: -0.5ch;
       }
 
       &:nth-child(2n) > h1 {
-        right: 0.5ch;
+        left: -0.5ch;
       }
 
       > section > div > h2 {

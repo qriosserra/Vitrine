@@ -105,10 +105,10 @@ body > main > article > h1 {
   color: #C7C7C7;
 }
 body > main > article:nth-child(n) > h1 {
-  left: 0.5ch;
+  right: -0.5ch;
 }
 body > main > article:nth-child(2n) > h1 {
-  right: 0.5ch;
+  left: -0.5ch;
 }
 body > main > article > section > div > h2 {
   font-family: "PlayfairDisplay", serif;
