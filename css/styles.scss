@@ -107,12 +107,13 @@ body {
   > main {
     display: flex;
     justify-content: center;
-    //flex-direction: column;
+    flex-direction: column;
 
     > article {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
 
       > h1 {
         position: absolute;
@@ -146,11 +147,11 @@ body {
         position: relative;
 
         &:nth-child(even) {
-          right: 100%;
+          right: 10%;
         }
 
         &:nth-child(odd) {
-          left: 100%;
+          left: 10%;
         }
 
         > div > ul > li {

@@ -89,11 +89,13 @@ body > header svg#header_wave {
 body > main {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 body > main > article {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 body > main > article > h1 {
   position: absolute;
@@ -121,10 +123,10 @@ body > main > article > section {
   position: relative;
 }
 body > main > article > section:nth-child(even) {
-  right: 100%;
+  right: 10%;
 }
 body > main > article > section:nth-child(odd) {
-  left: 100%;
+  left: 10%;
 }
 body > main > article > section > div > ul > li {
   font-family: "Lato", serif;
