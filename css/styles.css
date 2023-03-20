@@ -133,6 +133,10 @@ body > main > article > section > div > ul > li {
   font-size: 1.25rem;
   padding: 8px 0;
 }
+body > main > article > img {
+  position: absolute;
+  width: 20%;
+}
 body > footer {
   background: #000;
   position: relative;
