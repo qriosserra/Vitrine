@@ -3,7 +3,6 @@ a {
 }
 
 p {
-  color: white;
   font-family: "Lato", sans-serif;
   font-weight: normal;
 }
@@ -18,7 +17,7 @@ body > nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 2;
 }
 body > nav > ul {
   display: flex;
@@ -44,7 +43,7 @@ body > nav > ul > li > a > p {
 }
 body > header {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 body > header > div {
   height: 75vh;
@@ -75,29 +74,26 @@ body > header > div > a {
   padding: 12px 24px;
   border-radius: 100vh;
   font-size: 1.75rem;
+  color: white;
 }
 body > header > div > a:hover {
   padding: 12px 36px;
 }
-body > header svg#header_wave {
+body > header > #header_wave {
   aspect-ratio: 900/150;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
 }
-body > main {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-body > main > article {
+body article, body footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 20vh;
 }
-body > main > article > h1 {
+body article > h1, body footer > h1 {
   position: absolute;
   z-index: -1;
   user-select: none;
@@ -106,18 +102,22 @@ body > main > article > h1 {
   font-size: 25vw;
   color: #C7C7C7;
 }
-body > main > article:nth-child(n) > h1 {
+body article:nth-child(n) > h1, body footer:nth-child(n) > h1 {
   right: -0.5ch;
 }
-body > main > article:nth-child(2n) > h1 {
+body article:nth-child(2n) h1, body footer:nth-child(2n) h1 {
   left: -0.5ch;
 }
-body > main > article > section > div > h2 {
-  font-family: "PlayfairDisplay", serif;
-  font-weight: bold;
-  font-size: 3rem;
-  padding: 12px 0;
-  width: 8ch;
+body > main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+body > main p {
+  width: 30vw;
+  font-size: 1.25rem;
+  color: #404040;
+  line-height: 2rem;
 }
 body > main > article > section {
   position: relative;
@@ -128,19 +128,109 @@ body > main > article > section:nth-child(even) {
 body > main > article > section:nth-child(odd) {
   left: 10%;
 }
-body > main > article > section > div > ul > li {
+body > main > article > section > div > h2 {
+  font-family: "PlayfairDisplay", serif;
+  font-weight: bold;
+  font-size: 3rem;
+  padding: 12px 0;
+  width: 8ch;
+}
+body > main > article > section > div > ul > li, body > main > article > section > div > p {
   font-family: "Lato", serif;
   font-size: 1.25rem;
+  width: 36ch;
   padding: 8px 0;
 }
-body > main > article > img {
-  position: absolute;
-  width: 20%;
+body > main > article#projects > div.hint {
+  left: 50%;
+  top: 50%;
+  width: 200px;
+  height: 50px;
+}
+body > main > article#projects > div.hint div.circle {
+  border: 4px solid #b8b8b8;
+  border-radius: 50%;
+  margin-top: 5px;
+  height: 30px;
+  width: 30px;
+  animation: circles 1.25s ease-out infinite, swipe 1.25s ease-out infinite;
+}
+@keyframes swipe {
+  0% {
+    transform: translateX(160px);
+  }
+  20% {
+    transform: translateX(160px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes circles {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body > main > article#projects > swiper-container {
+  width: 100%;
+}
+body > main > article#projects > swiper-container > swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+body > main > article#projects > swiper-container > swiper-slide > img {
+  height: 66vh;
+  border-radius: 4%;
+  box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.2);
+  margin: 48px;
 }
 body > footer {
-  background: #000;
-  position: relative;
-  top: 2560px;
+  background: #080808;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #CCCCCC;
+  height: 75vh;
+}
+body > footer > h1 {
+  color: #0c0c0c;
+  z-index: 3;
+}
+body > footer > * {
+  margin: 32px;
+  z-index: 4;
+}
+body > footer p {
+  font-size: 1.5rem;
+}
+body > footer div:nth-child(2) {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+}
+body > footer div {
+  display: flex;
+  flex-direction: row;
+  column-gap: 32px;
+}
+body > footer a img {
+  width: 32px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 8px;
+  border-radius: 4px;
+  transition: 200ms ease-in-out;
+}
+body > footer a img:hover {
+  border-radius: 12px;
 }
 
 /*# sourceMappingURL=styles.css.map */

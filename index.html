@@ -5,18 +5,20 @@
 	<title>Quentin RIOS-SERRA</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+	<script src="js/swiper.js"></script>
 </head>
 <body>
 <nav>
 	<ul>
 		<li>
-			<a href="#"><p>Skills</p></a>
+			<a href="#skills"><p>Skills</p></a>
 		</li>
 		<li>
-			<a href="#"><p>Projects</p></a>
+			<a href="#projects"><p>Projects</p></a>
 		</li>
 		<li>
-			<a href="#"><p>Contact</p></a>
+			<a href="#contact"><p>Contact</p></a>
 		</li>
 	</ul>
 	<div id="marker"></div>
@@ -25,15 +27,19 @@
 	<div>
 		<h1>Je suis <span>Quentin Rios-Serra</span>, étudiant en BUT Informatique, je souhaite continuer dans le
 			développement web.</h1>
-		<a href="#">Découvrir</a>
+		<a href="#intro"><p>Découvrir</p></a>
 	</div>
-	<svg id="header_wave" viewBox="0 0 900 150" width="900" height="150" xmlns="http://www.w3.org/2000/svg"
-	     xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-		<path d="M0 30L37.5 43.7C75 57.3 150 84.7 225 95.2C300 105.7 375 99.3 450 84.5C525 69.7 600 46.3 675 44.2C750 42 825 61 862.5 70.5L900 80L900 0L862.5 0C825 0 750 0 675 0C600 0 525 0 450 0C375 0 300 0 225 0C150 0 75 0 37.5 0L0 0Z"
-		      fill="#080808"></path>
-	</svg>
+	<img id="header_wave" src="svg/header_wave.svg" alt="">
 </header>
 <main>
+	<article id="intro">
+		<p>J’ai en effet entamé ma 2ème année du BUT Informatique à l’IUT de Montpellier. J’ai choisi cette formation
+			car le domaine de l’informatique m’a toujours intéressé et je souhaitais en savoir plus. J’ai travaillé sur
+			de nombreux projets tout au long de ma formation. Beaucoup de ces projets étaient orientés vers le
+			développement web. Je peux donc aisément affirmer que je souhaite continuer dans cette voie et me
+			professionnaliser. J'envisage de continuer mes études par un Master Informatique. Ou si l'occasion se présente,
+			continuer en entreprise</p>
+	</article>
 	<article id="skills">
 		<h1>Skills</h1>
 		<section>
@@ -85,42 +91,60 @@
 			</div>
 		</section>
 	</article>
-	<article id="carrousel">
-		<h1>Carrousel</h1>
-		<img src="img/1.png" alt="">
-		<img src="img/2.png" alt="">
-		<img src="img/3.png" alt="">
-		<img src="img/4.png" alt="">
-		<img src="img/5.png" alt="">
-		<img src="img/6.png" alt="">
-		<img src="img/7.png" alt="">
-		<img src="img/8.png" alt="">
-	</article>
 	<article id="projects">
 		<h1>Projects</h1>
+		<div class="hint">
+			<div class="circle"></div>
+		</div>
+		<swiper-container>
+			<swiper-slide><img src="img/1.png" alt="page1"></swiper-slide>
+			<swiper-slide><img src="img/2.png" alt="page2"></swiper-slide>
+			<swiper-slide><img src="img/3.png" alt="page3"></swiper-slide>
+			<swiper-slide><img src="img/4.png" alt="page4"></swiper-slide>
+			<swiper-slide><img src="img/5.png" alt="page5"></swiper-slide>
+			<swiper-slide><img src="img/6.png" alt="page6"></swiper-slide>
+			<swiper-slide><img src="img/7.png" alt="page7"></swiper-slide>
+			<swiper-slide><img src="img/8.png" alt="page8"></swiper-slide>
+		</swiper-container>
 		<section>
-			<h2>Faireply</h2>
-			<p>Nous avons conçu entièrement un site permettant de poster une question auquel les utilisateurs pourront
-				répondre, et par la ensuite voter pour voter la meilleure réponse.</p>
+			<div>
+				<h2><a href="https://github.com/qriosserra/Faireply">Faireply</a></h2>
+				<p>Dans le cadre de notre formation, nous avons conçu entièrement un site permettant de poster une
+					question auquel les utilisateurs pourront répondre, et par la suite voter pour la meilleure
+					réponse.</p>
+			</div>
 		</section>
 		<section>
-			<h2>Lost in the Dark</h2>
-			<p>À l'occasion de la <a href="https://codegamejam.extragames.fr/">Code Game Jam 2022</a>, </p>
+			<div>
+				<h2><a href="https://github.com/qriosserra/CGJ2022">Lost in the Dark</a></h2>
+				<p>À l'occasion de la <a href="https://codegamejam.extragames.fr/">Code Game Jam 2022</a>, nous avons
+					conçu
+					un jeu dans une période restrainte de 30 heures dans une équipe de 5, où chacun se voyait attribué
+					un
+					rôle bien particulier.</p>
+			</div>
 		</section>
 		<section>
-			<h2></h2>
+			<div>
+				<h2><a href="https://github.com/qriosserra/Aventuriers-du-rail">Aventuriers du rail</a></h2>
+				<p>Nous avons recréé un jeu de plateau en développant le back-end en Java
+					et le front-end en JavaFX. Ce projet couvrait différent aspect technique complexe, tel que
+					rechercher le chemin le plus long.</p>
+			</div>
 		</section>
-	</article>
-	<article id="contact">
-
 	</article>
 </main>
-<footer>
+<footer id="contact">
 	<h1>Contact</h1>
-	<p>06 89 95 54 27</p>
-	<a href="mailto:q.riosserra@gmail.com">q.riosserra@gmail.com</a>
-	<a href="https://fr.linkedin.com/in/qriosserra"><img src="svg/linkedin.svg" alt="linkedin"></a>
-	<a href="https://github.com/qriosserra"><img src="svg/github.svg" alt="linkedin"></a>
+	<div>
+		<a href="pdf/CV_Quentin_RIOS-SERRA.pdf" download="CV_Quentin_RIOS-SERRA.pdf"><p>CV</p></a>
+		<p>06 89 95 54 27</p>
+		<a href="mailto:q.riosserra@gmail.com"><p>q.riosserra@gmail.com</p></a>
+	</div>
+	<div>
+		<a href="https://fr.linkedin.com/in/qriosserra"><img src="svg/linkedin.svg" alt="linkedin"></a>
+		<a href="https://github.com/qriosserra"><img src="svg/github.svg" alt="linkedin"></a>
+	</div>
 </footer>
 </body>
 </html>
