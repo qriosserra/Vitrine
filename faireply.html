@@ -1,18 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="css/styles.css">
+	<meta charset="UTF-8">
+	<title>Quentin RIOS-SERRA</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+	<script src="js/swiper.js"></script>
 </head>
 <body>
-<p>Dans le cadre de notre formation, nous avons conçu entièrement un site permettant de poster une
-    question auquel les utilisateurs pourront répondre, et par la suite voter pour la meilleure
-    réponse.</p>
-<article>
-    <p>Dans le cadre de notre formation, nous avons conçu entièrement un site permettant de poster une
-        question auquel les utilisateurs pourront répondre, et par la suite voter pour la meilleure
-        réponse.</p>
-</article>
+<nav>
+	<ul>
+		<li>
+			<a href="index.html"><p>Home</p></a>
+		</li>
+	</ul>
+	<div id="marker"></div>
+</nav>
+<header>
+	<div>
+		<h1><span>Faireply</span>, un site de vote communautaire.</h1>
+		<a href="#intro"><p>Découvrir</p></a>
+	</div>
+	<img id="header_wave" src="svg/header_wave.svg" alt="">
+</header>
+<main>
+	<article id="intro">
+		<h1>Faireply</h1>
+		<p>Dans le cadre de notre formation, nous avons conçu entièrement un site permettant de poster une
+			question auquel les utilisateurs pourront répondre, et par la suite voter pour la meilleure
+			réponse.</p>
+		<p>Ce site a été développer en respectant l'architecture MVC (Modèle-Vue-Controleur). Il est également protégé
+			contre les injection SQL. Nous avons également implémenté un rôle d'administrateur pouvant gérer les
+			éléments du site web. Par ailleurs, le site utilise le système de base de données MySQL.</p>
+		<div class="hint">
+			<div class="circle"></div>
+		</div>
+		<swiper-container>
+			<swiper-slide><img src="img/faireply1.png" alt="slide1"></swiper-slide>
+			<swiper-slide><img src="img/faireply2.png" alt="slide2"></swiper-slide>
+			<swiper-slide><img src="img/faireply3.png" alt="slide3"></swiper-slide>
+		</swiper-container>
+	</article>
+</main>
+<footer id="contact">
+	<h1>Contact</h1>
+	<div>
+		<a href="pdf/CV_Quentin_RIOS-SERRA.pdf" download="CV_Quentin_RIOS-SERRA.pdf"><p>CV</p></a>
+		<p>06 89 95 54 27</p>
+		<a href="mailto:q.riosserra@gmail.com"><p>q.riosserra@gmail.com</p></a>
+	</div>
+	<div>
+		<a href="https://fr.linkedin.com/in/qriosserra"><img src="svg/linkedin.svg" alt="linkedin"></a>
+		<a href="https://github.com/qriosserra"><img src="svg/github.svg" alt="linkedin"></a>
+	</div>
+</footer>
 </body>
 </html>

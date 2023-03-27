@@ -2,7 +2,7 @@
 $navHeight: 64px;
 $mainColor: rgb(180, 80, 80);
 
-a {
+img {
   user-select: none;
 }
 
@@ -32,21 +32,20 @@ body {
       font-size: 3rem;
 
       > li > a {
-        //filter: blur(1.5px);
         transition: 250ms ease-in-out;
         position: relative;
         left: 0;
+        color: #080808;
 
         &:hover {
           transition: 250ms ease-in-out;
           left: 2%;
-          //filter: none;
+          color: $mainColor;
         }
 
         > p {
           font-family: "PlayfairDisplay", serif;
           font-weight: bold;
-          color: #080808;
         }
       }
     }
@@ -57,7 +56,7 @@ body {
     z-index: 3;
 
     > div {
-      height: 75vh;
+      height: 70vh;
       width: 100%;
       background-color: #080808;
 
@@ -110,7 +109,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20vh;
+    margin-top: 15vh;
 
     > h1 {
       position: absolute;
@@ -142,36 +141,10 @@ body {
       font-size: 1.25rem;
       color: #404040;
       line-height: 2rem;
+      margin-bottom: 2rem;
     }
 
-    > article > section {
-      position: relative;
-
-      &:nth-child(even) {
-        right: 10%;
-      }
-
-      &:nth-child(odd) {
-        left: 10%;
-      }
-
-      > div > h2 {
-        font-family: "PlayfairDisplay", serif;
-        font-weight: bold;
-        font-size: 3rem;
-        padding: 12px 0;
-        width: 8ch;
-      }
-
-      > div > ul > li, > div > p {
-        font-family: "Lato", serif;
-        font-size: 1.25rem;
-        width: 36ch;
-        padding: 8px 0;
-      }
-    }
-
-    > article#projects {
+    > article {
 
       > div.hint {
         left: 50%;
@@ -230,6 +203,45 @@ body {
             box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.2);
             margin: 48px;
           }
+        }
+      }
+
+      > section {
+        position: relative;
+
+        &:nth-child(even) {
+          right: 10%;
+        }
+
+        &:nth-child(odd) {
+          left: 10%;
+        }
+
+        div > h2 {
+          font-family: "PlayfairDisplay", serif;
+          font-weight: bold;
+          font-size: 3rem;
+          padding: 12px 0;
+          width: 8ch;
+        }
+
+        div > ul > li, div > p {
+          font-family: "Lato", serif;
+          font-size: 1.25rem;
+          width: 36ch;
+          padding: 8px 0;
+        }
+      }
+    }
+    > article#projects {
+
+      > section > a {
+        transition: 250ms ease-in-out;
+        color: #080808;
+
+        &:hover * {
+          transition: 250ms ease-in-out;
+          color: $mainColor;
         }
       }
     }
